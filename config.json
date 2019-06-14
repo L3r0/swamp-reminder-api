@@ -1,0 +1,102 @@
+{
+  "order": {
+    "peopleRotation": [
+      {
+        "name": "Anthony",
+        "date": "2019-06-25",
+        "prettyDate": "19/06/2019",
+        "holidays": []
+      },
+      {
+        "name": "Cédric",
+        "date": "2019-06-26",
+        "prettyDate": "20/06/2019",
+        "holidays": []
+      },
+      {
+        "name": "Jonathan",
+        "date": "2019-06-27",
+        "prettyDate": "21/06/2019",
+        "holidays": [
+          {
+            "start": "2019-06-10",
+            "end": "2019-06-30"
+          }
+        ]
+      },
+      {
+        "name": "François",
+        "date": "2019-06-14",
+        "prettyDate": "24/06/2019",
+        "holidays": []
+      },
+      {
+        "name": "Aurélien",
+        "date": "2019-06-17",
+        "prettyDate": "25/06/2019",
+        "holidays": [
+          {
+            "start": "2019-06-14",
+            "end": "2019-07-01"
+          }
+        ]
+      },
+      {
+        "name": "Axel",
+        "date": "2019-06-18",
+        "holidays": []
+      },
+      {
+        "name": "Gael",
+        "date": "2019-06-19",
+        "holidays": []
+      },
+      {
+        "name": "Erven",
+        "date": "2019-06-20",
+        "holidays": []
+      },
+      {
+        "name": "Mélanie",
+        "date": "2019-06-21",
+        "holidays": []
+      },
+      {
+        "name": "Germain",
+        "date": "2019-06-24",
+        "holidays": []
+      }
+    ]
+  },
+  "sentences": {
+    "today": [
+      {
+        "sentence": "Hey <span class='name'>{name}</span>, c'est à toi de faire le suivi de prod !",
+        "tag": "you+best"
+      },
+      {
+        "sentence": "Hey <span class='name'>{name}</span>, n'oublie pas de faire le suivi de prod !",
+        "tag": "think"
+      },
+      {
+        "sentence": "Hey <span class='name'>{name}</span>, tu n'oublie pas de faire le suivi de prod, hein ?!",
+        "tag": "forget"
+      }
+    ],
+    "tomorrow": [
+      {
+        "sentence": "La prochaine fois, ce sera à <span class='name'>{name}</span> de le faire !",
+        "tag": "you"
+      },
+      {
+        "sentence": "Au fait, ce sera à <span class='name'>{name}</span> de le faire ensuite !",
+        "tag": "btw"
+      },
+      {
+        "sentence": "Ca me fait penser qu'après, ce sera le tour de <span class='name'>{name}</span> de le faire ...",
+        "tag": "forget"
+      }
+    ]
+  },
+  "reloadInterval": 3600000
+}
