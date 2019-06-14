@@ -4,11 +4,13 @@ const bodyParser = require('body-parser');
 const fs = require('fs-extra');
 var config = require('./config.json');
 
+//Parser for the body of request
 app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(bodyParser.json());
 
+//Allow CORS
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
@@ -23,13 +25,13 @@ app.use(function(req, res, next) {
   }
 });
 
+//return JSON if asked politely
 app.get('/config', function(req, res) {
   res.json(config);
 });
 
+//Svae config
 app.put('/config', function(req, res) {
-  console.log(req.body);
-
   config = req.body;
 
   fs.writeJson('./config.json', config, {
@@ -41,6 +43,7 @@ app.put('/config', function(req, res) {
     });
 });
 
+//If options, we're also reponsding politely without CORS
 app.options("/*", function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
@@ -48,6 +51,7 @@ app.options("/*", function(req, res, next) {
   res.send(200);
 });
 
+//Launch the server
 app.listen(3000, function() {
   console.log('Example app listening on port 3000!')
 })
