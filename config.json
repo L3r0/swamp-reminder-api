@@ -3,13 +3,13 @@
     "peopleRotation": [
       {
         "name": "Anthony",
-        "date": "2019-06-25",
+        "date": "2019-06-24",
         "prettyDate": "19/06/2019",
         "holidays": []
       },
       {
         "name": "Cédric",
-        "date": "2019-06-26",
+        "date": "2019-06-25",
         "prettyDate": "20/06/2019",
         "holidays": []
       },
@@ -26,14 +26,14 @@
       },
       {
         "name": "François",
-        "date": "2019-06-14",
+        "date": "2019-06-26",
         "prettyDate": "24/06/2019",
         "holidays": []
       },
       {
         "name": "Aurélien",
-        "date": "2019-06-17",
-        "prettyDate": "25/06/2019",
+        "date": "2019-06-27",
+        "prettyDate": "02/07/2019",
         "holidays": [
           {
             "start": "2019-06-14",
@@ -43,27 +43,36 @@
       },
       {
         "name": "Axel",
-        "date": "2019-06-18",
+        "date": "2019-06-28",
         "holidays": []
       },
       {
         "name": "Gael",
+        "date": "2019-06-18",
+        "holidays": [
+          {
+            "start": "2019-06-18",
+            "end": "2019-06-17"
+          },
+          {
+            "start": "2019-06-18",
+            "end": "2019-07-07"
+          }
+        ]
+      },
+      {
+        "name": "Erven",
         "date": "2019-06-19",
         "holidays": []
       },
       {
-        "name": "Erven",
+        "name": "Mélanie",
         "date": "2019-06-20",
         "holidays": []
       },
       {
-        "name": "Mélanie",
-        "date": "2019-06-21",
-        "holidays": []
-      },
-      {
         "name": "Germain",
-        "date": "2019-06-24",
+        "date": "2019-06-21",
         "holidays": []
       }
     ]
