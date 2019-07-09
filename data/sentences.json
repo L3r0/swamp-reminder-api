@@ -1,0 +1,30 @@
+{
+  "today": [
+    {
+      "sentence": "Hey <span class='name'>{name}</span>, c'est à toi de faire le suivi de prod !",
+      "tag": "you+best"
+    },
+    {
+      "sentence": "Hey <span class='name'>{name}</span>, n'oublie pas de faire le suivi de prod !",
+      "tag": "think"
+    },
+    {
+      "sentence": "Hey <span class='name'>{name}</span>, tu n'oublie pas de faire le suivi de prod, hein ?!",
+      "tag": "forget"
+    }
+  ],
+  "tomorrow": [
+    {
+      "sentence": "La prochaine fois, ce sera à <span class='name'>{name}</span> de le faire !",
+      "tag": "you"
+    },
+    {
+      "sentence": "Au fait, ce sera à <span class='name'>{name}</span> de le faire ensuite !",
+      "tag": "btw"
+    },
+    {
+      "sentence": "Ca me fait penser qu'après, ce sera le tour de <span class='name'>{name}</span> de le faire ...",
+      "tag": "forget"
+    }
+  ]
+}

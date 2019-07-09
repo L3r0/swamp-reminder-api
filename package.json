@@ -11,6 +11,8 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "fs-extra": "^8.0.1"
+    "fs-extra": "^8.0.1",
+    "moment": "^2.24.0",
+    "moment-ferie-fr": "^0.2.1"
   }
 }
