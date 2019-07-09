@@ -35,7 +35,11 @@ app.post('/shiftrotation', function(req, res) {
 }); 
 
 app.get('/rotation', function(req, res) {
-  res.json(rotation.getRotation());
+  res.json(rotation.getRotation(1));
+}); 
+
+app.get('/rotationMonth', function(req, res) {
+  res.json(rotation.getRotation(4));
 }); 
 
 app.get('/sentences', function(req, res) {

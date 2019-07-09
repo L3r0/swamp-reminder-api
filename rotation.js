@@ -10,7 +10,7 @@ function isWeekend(date) {
 };
 
 
-function getRotation() {
+function getRotation(numberOfRotations) {
   let currentDate = moment(new Date());
   //Get historic
   let historic = JSON.parse(fs.readFileSync('./data/historic.json'));
@@ -25,7 +25,7 @@ function getRotation() {
   //todo : check date
   let rotation = [];
   let todayAttribution = null;
-  for (let i = 0; i < names.length; i++) {
+  for (let i = 0; i < names.length * numberOfRotations; i++) {
     //Add days untill we are an open day
     while (isWeekend(currentDate) && currentDate.isFerie) {
       currentDate.add(1, 'days');
