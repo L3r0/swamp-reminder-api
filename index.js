@@ -53,7 +53,6 @@ app.get('/holidays', function(req, res) {
 app.put('/holidays', function(req, res) {
   let data = req.body;
   holiday.updateHolidays(data);
-  console.log(data);
   res.send("OK");
 });
 

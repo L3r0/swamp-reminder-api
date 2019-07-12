@@ -6,6 +6,9 @@ function isOnHoliday(name, date) {
   let holidays = JSON.parse(fs.readFileSync('./data/holidays.json'));
   //Aurélien ne travaille pas le lundi
   if (name === 'Aurélien' && date.day() === 1) return true;
+  //On vérifie si le jour est férié
+  if (date.isFerie()) return true;
+  //On vérifie si la personne est en vacance a cette date
   for (let i = 0; i < holidays.length; i++) {
     if (holidays[i].person === name) {
       const dates = holidays[i];

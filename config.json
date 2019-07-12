@@ -3,19 +3,19 @@
     "peopleRotation": [
       {
         "name": "Anthony",
-        "date": "2019-06-24",
+        "date": "2019-07-18",
         "prettyDate": "19/06/2019",
         "holidays": []
       },
       {
         "name": "Cédric",
-        "date": "2019-06-25",
+        "date": "2019-07-19",
         "prettyDate": "20/06/2019",
         "holidays": []
       },
       {
         "name": "Jonathan",
-        "date": "2019-06-27",
+        "date": "2019-07-08",
         "prettyDate": "21/06/2019",
         "holidays": [
           {
@@ -26,13 +26,13 @@
       },
       {
         "name": "François",
-        "date": "2019-06-26",
+        "date": "2019-07-09",
         "prettyDate": "24/06/2019",
         "holidays": []
       },
       {
         "name": "Aurélien",
-        "date": "2019-06-27",
+        "date": "2019-07-10",
         "prettyDate": "02/07/2019",
         "holidays": [
           {
@@ -43,12 +43,12 @@
       },
       {
         "name": "Axel",
-        "date": "2019-06-28",
+        "date": "2019-07-11",
         "holidays": []
       },
       {
         "name": "Gael",
-        "date": "2019-06-18",
+        "date": "2019-07-12",
         "holidays": [
           {
             "start": "2019-06-18",
@@ -62,17 +62,17 @@
       },
       {
         "name": "Erven",
-        "date": "2019-06-19",
+        "date": "2019-07-15",
         "holidays": []
       },
       {
         "name": "Mélanie",
-        "date": "2019-06-20",
+        "date": "2019-07-16",
         "holidays": []
       },
       {
         "name": "Germain",
-        "date": "2019-06-21",
+        "date": "2019-07-17",
         "holidays": []
       }
     ]
