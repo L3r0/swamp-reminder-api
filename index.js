@@ -1,20 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const fs = require('fs-extra');
-const util = require('util');
 const moment = require('moment');
-const phantom = require('phantom');
 const path = require('path');
 const app = express();
-var instance;
-var page;
 var config = require('./config.json');
 var sentences = require('./data/sentences.json');
 var rotation = require('./rotation');
 var holiday = require('./holiday');
+var images = require('./images')
 
+//Serves static images file
 var dir = path.join(__dirname, 'images');
-
 app.use(express.static(dir));
 
 //Parser for the body of request
@@ -97,67 +93,15 @@ app.options("/*", function(req, res, next) {
   res.send(200);
 });
 
+//Everyday, get Sonar image
 setInterval(() => {
   let now = moment();
   let yesterday = moment().subtract(1, 'day');
   if (now.hour() > 8) {
-    checkImageExist(now);
-
-    clearImages();
+    images.createImage(now);
+    images.clearImages();
   }
 }, 10000);
-
-(async () => {
-  //setup PhantomJS
-instance = await phantom.create();
-page = await instance.createPage();
-
-//Set the viewPort size
-await page.property('viewportSize', { width: 1280, height: 1400 });
-await page.property('clipRect', { top: 130, left: 18, width: 950, height: 1200 });
-page.on('onResourceError',(resourceError) => {
-  console.error(resourceError.url + ': ' + resourceError.errorString);
-});
-})();
-
-var renderImage = async(url, fileName, page) => {
-  //Open the page
-  const status = await page.open(url);
-  console.log(`Page opened with status [${status}].`);
-
-  if(status === 'success') {
-    //Let a bit of time for page to render
-    setTimeout(async () => {
-      await page.render(fileName);
-    }, 10000);
-  }
-};
-
-var clearImages = function() {
-  let directory = './images';
-  fs.readdir(directory, (err, files) => {
-    files.forEach(file => {
-      let date = file.substring(0, file.indexOf('.'));
-      let dateMoment = moment(date);
-      if(dateMoment.isBefore(moment().subtract(5, 'day'))) {
-        fs.unlink(directory + '/' + file);
-      }
-    });
-  });
-}
-
-var checkImageExist = (time) => {
-  let imageName = './images/' + time.format('YYYY-MM-DD') + '.jpg';
-    try {
-      if (fs.existsSync(imageName)) {
-        //file exists, everything is fine
-      } else {
-        renderImage('http://sonarqube-prd.intra.arkea.com:8080/portfolio?id=BAD_Creature_Java1',imageName, page);
-      }
-    } catch (err) {
-      console.error(err)
-    }
-}
 
 //Launch the server
 app.listen(3000, function() {
