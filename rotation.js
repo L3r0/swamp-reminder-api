@@ -18,7 +18,8 @@ function getRotation(numberOfRotations) {
   let saveHistoric = true;
   // If today's historic has already been saved, get the previous entry.
   // Else, save historic at the end of the process
-  if (moment(historic[0].date).isSame(currentDate, 'day')) {
+  // Do not update on weekens
+  if (moment(historic[0].date).isSame(currentDate, 'day') && !isWeekend(currentDate)) {
     whodidlast = historic[1].name;
     saveHistoric = false;
   }
